@@ -1,8 +1,6 @@
 h1 {
 }
 .list {
-  /* margin: 40px auto 0px auto; */
-  /* background-color: aqua; */
   width: 40%;
 }
 
@@ -11,11 +9,13 @@ h1 {
   margin: 10px auto 10px auto;
   display: flex;
   justify-content: space-between;
-  /* text-align: left; */
-  /* width: 60%; */
 }
 .list-item:hover {
-  /* background-color: rgb(170, 252, 242); */
+  background-color: rgba(165, 236, 252, 0.794);
+}
+
+.list-item:hover button:first-of-type {
+  visibility: visible;
 }
 .list-item.done label {
   text-decoration: line-through;
@@ -31,4 +31,5 @@ h1 {
   border-radius: 5px;
 }
 .buttonRemove {
+  visibility: hidden;
 }
