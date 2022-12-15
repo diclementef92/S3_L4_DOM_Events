@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", (event) => {
   const button = document.querySelector(".add-task");
 
+  //bottone aggiungi
   button.onclick = function () {
     const task = document.querySelector(".input-task");
     addTask(task.value.trim());
@@ -22,9 +23,12 @@ const addTask = function (text) {
     task.textContent = text;
 
     let buttonRemove = document.createElement("button");
+    buttonRemove.classList.add("buttonRemove");
     buttonRemove.textContent = "Rimuovi";
 
-    buttonRemove.onclick = function name(params) {};
+    buttonRemove.onclick = function (e) {
+      buttonRemove.parentNode.remove();
+    };
 
     item.appendChild(square);
     item.appendChild(task);

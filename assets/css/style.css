@@ -2,18 +2,24 @@ h1 {
 }
 .list {
   margin-top: 20px;
-  padding-left: 20px;
+  margin-left: 20px;
 }
-.list ul {
-}
+
 .list-item {
   margin-top: 10px;
+  width: 50%;
   list-style-type: none;
 }
 .list-item:hover {
-  background-color: rgb(170, 252, 242);
-  /* width: 10%; */
+  /* background-color: rgb(170, 252, 242); */
 }
 .list-item.done {
   text-decoration: line-through;
+}
+.add-task {
+  background-color: rgb(71, 71, 254);
+  color: white;
+}
+.buttonRemove {
+  margin-left: 40%;
 }
