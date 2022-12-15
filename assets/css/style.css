@@ -23,9 +23,12 @@ h1 {
 .task {
   margin: 0 10px 0 20px;
 }
+
+/* button Aggiungi */
 .add-task {
-  background-color: rgb(71, 71, 254);
+  background-color: rgba(93, 123, 255, 0.939);
   color: white;
+  border-radius: 5px;
 }
 .buttonRemove {
 }

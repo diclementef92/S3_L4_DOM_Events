@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const button = document.querySelector(".add-task");
 
   //bottone aggiungi
-  button.onclick = function () {
+  button.onclick = function (event) {
     const task = document.querySelector(".input-task");
     addTask(task.value.trim());
     task.value = "";
@@ -28,27 +28,43 @@ const addTask = function (text) {
     buttonRemove.textContent = "Rimuovi";
 
     buttonRemove.onclick = function (e) {
-      buttonRemove.parentNode.remove();
+      e.currentTarget.parentNode.remove();
     };
 
     item.appendChild(square);
     item.appendChild(task);
     item.appendChild(buttonRemove);
 
-    item.onclick = function () {
-      if (item.classList.contains("done")) {
+    item.onclick = function (e) {
+      if (e.currentTarget.classList.contains("done")) {
         // precedentemente clicckato
-        item.classList.remove("done");
-        item.querySelector("i").classList.remove("fa-square-check"); //<i class="fa-regular fa-square-check"></i>
-        item.querySelector("i").classList.add("fa-square");
+        e.currentTarget.classList.remove("done");
+        e.currentTarget.querySelector("i").classList.remove("fa-square-check"); //<i class="fa-regular fa-square-check"></i>
+        e.currentTarget.querySelector("i").classList.add("fa-square");
       } else {
         //altrimenti lo rimuovo
-        item.classList.add("done");
-        item.querySelector("i").classList.remove("fa-square");
-        item.querySelector("i").classList.add("fa-square-check");
+        e.currentTarget.classList.add("done");
+        e.currentTarget.querySelector("i").classList.add("fa-square-check");
+        e.currentTarget.querySelector("i").classList.remove("fa-square");
       }
     };
 
     listArea.appendChild(item);
   }
 };
+
+// document
+//   .getElementsByTagName("form")[0]
+//   .addEventListener("submit", function (e) {
+//     e.preventDefault();
+//   });
+
+window.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    // evita che la pagina si aggiorni premendo invio
+    e.preventDefault();
+    //ed esegue metodo add task
+    const button = document.querySelector(".add-task");
+    button.onclick();
+  }
+});
