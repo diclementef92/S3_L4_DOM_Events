@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   button.onclick = function () {
     const task = document.querySelector(".input-task");
     addTask(task.value.trim());
+    task.value = "";
   };
 });
 

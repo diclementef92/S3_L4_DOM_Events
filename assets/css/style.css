@@ -1,25 +1,31 @@
 h1 {
 }
 .list {
-  margin-top: 20px;
-  margin-left: 20px;
+  /* margin: 40px auto 0px auto; */
+  /* background-color: aqua; */
+  width: 10%;
 }
 
 .list-item {
-  margin-top: 10px;
-  width: 50%;
   list-style-type: none;
+  margin: 10px auto 10px auto;
+  display: flex;
+  justify-content: space-between;
+  /* text-align: left; */
+  /* width: 60%; */
 }
 .list-item:hover {
   /* background-color: rgb(170, 252, 242); */
 }
-.list-item.done {
+.list-item.done label {
   text-decoration: line-through;
+}
+.task {
+  margin: 0 10px 0 20px;
 }
 .add-task {
   background-color: rgb(71, 71, 254);
   color: white;
 }
 .buttonRemove {
-  margin-left: 40%;
 }
