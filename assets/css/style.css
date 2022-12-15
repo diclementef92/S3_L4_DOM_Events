@@ -1,0 +1,19 @@
+h1 {
+}
+.list {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+.list ul {
+}
+.list-item {
+  margin-top: 10px;
+  list-style-type: none;
+}
+.list-item:hover {
+  background-color: rgb(170, 252, 242);
+  /* width: 10%; */
+}
+.list-item.done {
+  text-decoration: line-through;
+}
