@@ -1,27 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Boogaloo&display=swap");
+body {
+  text-align: center;
+}
+.container {
+}
 h1 {
+  font-family: "Boogaloo", cursive;
+  color: rgb(79, 79, 255);
+  text-shadow: 2px 2px 0px rgb(67, 67, 67);
 }
-.list {
-  width: 40%;
-}
-
-.list-item {
-  list-style-type: none;
-  margin: 10px auto 10px auto;
-  display: flex;
-  justify-content: space-between;
-}
-.list-item:hover {
-  background-color: rgba(165, 236, 252, 0.794);
-}
-
-.list-item:hover button:first-of-type {
-  visibility: visible;
-}
-.list-item.done label {
-  text-decoration: line-through;
-}
-.task {
-  margin: 0 10px 0 20px;
+/* nuovo task text input  */
+.input-task {
+  border: 2px solid blue;
+  border-radius: 4px;
 }
 
 /* button Aggiungi */
@@ -29,7 +20,47 @@ h1 {
   background-color: rgba(93, 123, 255, 0.939);
   color: white;
   border-radius: 5px;
+  margin-top: 2vh;
+  margin-bottom: 4vh;
 }
+/* lista */
+.list {
+  width: 40%;
+  margin: 0 auto 0 auto;
+  padding-inline-start: 0;
+}
+
+.list-item {
+  font-family: "Boogaloo", cursive;
+  list-style-type: none;
+  margin: 1vh auto 1vh auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  border-radius: 5px;
+  /* background-color: rgba(255, 66, 66, 0.89) */
+}
+.list-item:hover {
+  background-color: rgba(177, 237, 251, 0.915);
+}
+
+.list-item.done label {
+  text-decoration: line-through;
+}
+.list-item:hover .buttonRemove {
+  visibility: visible;
+}
+
+/* task singolo */
+.task {
+  margin: 0 1vw 0 2vw;
+}
+
+/* icona rimuovi */
 .buttonRemove {
   visibility: hidden;
 }
